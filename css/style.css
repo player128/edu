@@ -1,0 +1,31 @@
+.content{
+    width: 1500px;
+    height: 800px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.content-center{
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.elem{
+    width: 360px;
+    height: 190px;
+    margin-right: 10px;
+}
+
+.elem:nth-child(4n) {
+    margin-right: 0px;
+}
+
+.elem:nth-child(4n + 1) {
+   margin-left: 10px;
+}
