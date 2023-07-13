@@ -1,15 +1,3 @@
-<?php
-namespace edu;
-ini_set('display_errors', 1);
-use edu\app\core\Route;
-require 'vendor/autoload.php';
-echo "sdfds";
-Route::start(); // запускаем маршрутизатор
-
-function elem($text) {
-    echo "<div class='elem elem-text border'>$text</div>";
-}
-?>
 <html>
     <head>
         <meta charset='utf-8'>
