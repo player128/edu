@@ -27,9 +27,9 @@ class Route
 		$model_name = 'Model_'.$controller_name;
 		$controller_name = 'Controller_'.ucfirst($controller_name);
 		$action_name = 'action_'.$action_name;
-		$controller_name = "\\edu\\app\\controllers\\".$controller_name;
+		$controller_name = "edu\\app\\controllers\\".$controller_name;
 
-		if(class_exists($controller_name, false))
+		if(class_exists($controller_name))
 		{
 			//Проверяем объявлен ли класс контроллера
 		}
@@ -40,10 +40,10 @@ class Route
 			но для упрощения сразу сделаем редирект на страницу 404
 			*/
 			Route::ErrorPage404();
+			echo "Класс $controller_name не найден";
 		}
 		
 		// создаем контроллер
-
 		$controller = new $controller_name;
 		$action = $action_name;
 		
