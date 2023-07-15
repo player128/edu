@@ -28,7 +28,7 @@ class Route
 		$controller_name = 'Controller_'.ucfirst($controller_name);
 		$action_name = 'action_'.$action_name;
 		$controller_name = "edu\\app\\controllers\\".$controller_name;
-
+		
 		if(class_exists($controller_name))
 		{
 			//Проверяем объявлен ли класс контроллера
