@@ -1,7 +1,7 @@
 <?php
-namespace edu\app\mysql;
+namespace Edu\app\mysql;
 
-require_once('app/config/mysql.php');
+require_once('C:\xampp\htdocs\edu\app\config\mysql.php');
 
 class Mysql
 {

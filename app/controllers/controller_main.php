@@ -1,7 +1,7 @@
 <?php
-namespace edu\app\controllers;
+namespace Edu\app\controllers;
 
-use \edu\app\core\Controller;
+use \Edu\app\core\Controller;
 class Controller_Main extends Controller
 {
 	function action_index()

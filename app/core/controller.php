@@ -1,5 +1,5 @@
 <?php
-namespace edu\app\core;
+namespace Edu\app\core;
 
 class Controller {
 	

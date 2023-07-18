@@ -16,6 +16,11 @@
         <?php 
 
         ?>
+        <form action="#" method="post" >
+            <input name= "name" type="text">
+            <input name="pass" type="text">
+            <input type="submit" value="О">
+        </form>
         <?php include 'app/views/'.$content_view; ?>
         </div>
     </body>

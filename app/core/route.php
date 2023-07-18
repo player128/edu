@@ -1,5 +1,5 @@
 <?php
-namespace edu\app\core;
+namespace Edu\app\core;
 
 class Route
 {
@@ -27,7 +27,7 @@ class Route
 		$model_name = 'Model_'.$controller_name;
 		$controller_name = 'Controller_'.ucfirst($controller_name);
 		$action_name = 'action_'.$action_name;
-		$controller_name = "edu\\app\\controllers\\".$controller_name;
+		$controller_name = "Edu\\app\\controllers\\".$controller_name;
 		
 		if(class_exists($controller_name))
 		{
