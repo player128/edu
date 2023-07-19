@@ -4,7 +4,19 @@
         <link rel="stylesheet" href="http://192.168.0.104:80/edu/css/norm.css">
         <link rel="stylesheet" href="http://192.168.0.104:80/edu/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script defer src="http://192.168.0.104:80/edu/scripts/user.js"></script>
+        <?php
+            $dir = 'C:/xampp/htdocs/edu/scripts';
+
+            if (is_dir($dir)) {
+                if ($dh = opendir($dir)) {
+                    while (($file = readdir($dh)) !== false) {
+                        if ($file == '.' || $file == '..') continue;
+                        echo "<script defer src='http://192.168.0.104:80/edu/scripts/$file'></script>";
+                    }
+                    closedir($dh);
+                }
+            }
+        ?>
     </head>
     <body>
         <div class="top">
