@@ -20,17 +20,17 @@ class User
        if ( $this->check()) {
             return false;
        }
-       $this->create();
+       return $this->create();
     }
 
     function auth()
     {
         $mysql = new Mysql();
-        $query = "SELECT * FROM `users` WHERE `name`= '$this->name' AND `pass` = '$$this->password'";
+        $query = "SELECT * FROM `users` WHERE `name`= '$this->name' AND `pass` = '$this->password'";
         $result = $mysql->query($query);
 
         if ($result->num_rows === 0) {
-            echo 'Неверный логин или пароль!';
+            // echo 'Неверный логин или пароль!';
             return false;
         }
 
@@ -45,6 +45,8 @@ class User
         $mysql = new Mysql();
         $query = "INSERT INTO `users`(`name`, `pass`) VALUES ('$this->name','$this->password')";
         $result = $mysql->query($query);
+
+        return true;
     }
 
     function check()
