@@ -1,3 +1,18 @@
+<?php
+    $dir = 'C:/xampp/htdocs/edu/scripts/user';
+    /*
+    Подумать над очерденостью загрузки скриптов, чтобы не возникали ошибки undefined
+    */
+    if (is_dir($dir)) {
+        if ($dh = opendir($dir)) {
+            while (($file = readdir($dh)) !== false) {
+                if ($file == '.' || $file == '..') continue;
+                echo "<script defer src='http://192.168.0.104:80/edu/scripts/user/$file'></script>";
+            }
+            closedir($dh);
+        }
+    }
+?>
 <h1>Добро пожаловать!</h1>
 <p>
 <img src="/images/office-small.jpg" align="left" >

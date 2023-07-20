@@ -52,10 +52,22 @@
     right: 10px;
     top: 15px;
     color:white;
+    cursor: pointer;
 }
 
 .user p {
     text-align: center;
+}
+
+.top-reg {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: red;
+    position: absolute;
+    top: 30px;
+    right: 120px;
+    cursor: pointer;
 }
 
 .form-user {
@@ -88,6 +100,7 @@
     text-align: center;
     position: absolute;
     bottom: 16px;
+    cursor: pointer;
 }
 
 .form-hide {
@@ -105,6 +118,7 @@
     font-size: 26px;
     text-align: center;
     border-radius: 11px;
+    cursor: pointer;
 }
 
 .form-back {

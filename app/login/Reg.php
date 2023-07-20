@@ -9,4 +9,7 @@ $pass = $_POST['pass'];
 $user = new User($name, $pass);
 if ($user->reg()) {
     echo json_encode("Аккаунт зарегистрирован.");
+} else {
+    echo json_encode("-1");
 }
+

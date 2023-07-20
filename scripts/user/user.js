@@ -1,5 +1,9 @@
 $('.user').click(function() {
-    if (isLogin()) return true;
+    if (isLogin()) {
+        logOut();
+        location.reload();
+        return true;
+    }
     $('.form-user').removeClass('form-hide');
     $('.form-back').removeClass('form-hide');
 });
@@ -7,6 +11,10 @@ $('.user').click(function() {
 $('.form-close').click(function() {
     $('.form-user').addClass('form-hide');
     $('.form-back').addClass('form-hide');
+});
+
+$('.top-reg').click(function() {
+    window.location = "http://localhost/edu/reg";
 });
 
 $('.form-send').click(function() {
@@ -23,8 +31,7 @@ $('.form-send').click(function() {
             console.log(response);
             if (login == 1) {
                 // 3 дня жизни куки
-                setCookie('login', 1, {'max-age' : '259200'});
-                setCookie('name', name, {'max-age' : '259200'});
+                logIn(name);
                 location.reload();
             } else {
                 alert('Неверный логин или пароль!');
@@ -34,16 +41,31 @@ $('.form-send').click(function() {
    });
 });
 
+function logIn(name) {
+    setCookie('login', 1, {'max-age' : '259200'});
+    setCookie('name', name, {'max-age' : '259200'});
+}
+
+function logOut() {
+    deleteCookie('login');
+    deleteCookie('name');
+}
+
 function isLogin() {
     return getCookie('login') ? true : false;
 }
 
-let content = "";
-if (isLogin()) {
-    let name = getCookie('name');
-    content = name;
-} else {
-    content = "Войти";
+function putUserBlock() {
+    let content = "";
+    if (isLogin()) {
+        let name = getCookie('name');
+        content = name + '<br>(Выйти)';
+    } else {
+        content = "Войти";
+        $('.top-reg').removeClass('form-hide');
+    }
+
+    $('.user').html('<p>' + content + '</p>');
 }
 
-$('.user').html('<p>' + content + '</p>');
+putUserBlock();

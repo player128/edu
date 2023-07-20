@@ -29,6 +29,10 @@ class User
         $query = "SELECT * FROM `users` WHERE `name`= '$this->name' AND `pass` = '$this->password'";
         $result = $mysql->query($query);
 
+        if (!$result) {
+            return false;
+        }
+
         if ($result->num_rows === 0) {
             // echo 'Неверный логин или пароль!';
             return false;
@@ -46,7 +50,7 @@ class User
         $query = "INSERT INTO `users`(`name`, `pass`) VALUES ('$this->name','$this->password')";
         $result = $mysql->query($query);
 
-        return true;
+        return $result;
     }
 
     function check()
@@ -58,10 +62,15 @@ class User
         $query = "SELECT * FROM `users` WHERE `name`= '$this->name'";
         $result = $mysql->query($query);
 
+        if (!$result) { // Если возникает ошибка при запросе, возвращаем false
+            return false;
+        }
+
         if ($result->num_rows > 0) {
-            echo 'Такой аккаунт уже есть!';
+            // echo 'Такой аккаунт уже есть!';
             return true;
         }
+
         return false; 
     }
 }
