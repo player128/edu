@@ -3,7 +3,7 @@
 2) git;
 3) xml;
 4) регулярные выражения;
-5) composer;
+5) composer(hexlet.io);
 
 Повторить:
 1) селекторы CSS;
