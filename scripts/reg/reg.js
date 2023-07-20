@@ -1,11 +1,12 @@
 $('.user').css({'display':'none'});
+$('.top-reg').css({'display':'none'});
 
-$('.form-send').click(function() {
-    console.log($('.form-user').serialize())
+$('.form-reg-send').click(function() {
+    console.log($('.form-reg').serialize())
     $.ajax({
         type: "POST",
         url: 'http://localhost/edu/app/login/Reg.php',
-        data: $('.form-user').serialize(),
+        data: $('.form-reg').serialize(),
         success: function(response)
         {
             var jsonData = JSON.parse(response);

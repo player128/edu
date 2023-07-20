@@ -69,8 +69,8 @@
     right: 120px;
     cursor: pointer;
 }
-
-.form-user {
+/* ///////////////////// */
+.myform {
     width: 400px;
     height: 200px;
     border: 1px solid grey;
@@ -84,15 +84,15 @@
     align-items: center;
 }
 
-.form-user > div {
+.myform > div {
     width: 300px;
 }
 
-.form-user > div > input {
+.myform > div > input {
     width: 100%;
 }
 
-.form-send {
+.myform-send {
     width: 55px !important;
     height: 20px;
     border-radius: 10px;
@@ -107,7 +107,7 @@
     display: none;
 }
 
-.form-close {
+.myform-close {
     width: 30px !important;
     height: 30px;
     background-color: black;
@@ -121,7 +121,7 @@
     cursor: pointer;
 }
 
-.form-back {
+.myform-back {
     width: 100%;
     height: 100%;
     position:absolute;
@@ -130,9 +130,15 @@
     opacity: 0.5;
 }
 
-.label-name-form {
+.myform-label-name-form {
     position: absolute;
     top: 11px;
     text-align: center;
     color: white;
+}
+
+/* ///////////////////////// */
+.form-reg {
+    margin: 0 auto;
+    position: relative;
 }

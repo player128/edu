@@ -5,20 +5,20 @@ $('.user').click(function() {
         return true;
     }
     $('.form-user').removeClass('form-hide');
-    $('.form-back').removeClass('form-hide');
+    $('.myform-back').removeClass('form-hide');
 });
 
-$('.form-close').click(function() {
+$('.form-user-close').click(function() {
     $('.form-user').addClass('form-hide');
-    $('.form-back').addClass('form-hide');
+    $('.myform-back').addClass('form-hide');
 });
 
 $('.top-reg').click(function() {
     window.location = "http://localhost/edu/reg";
 });
 
-$('.form-send').click(function() {
-    console.log($('.form-user').serialize())
+$('.form-user-send').click(function() {
+    console.log($('.form-user-send').serialize())
     $.ajax({
         type: "POST",
         url: 'http://localhost/edu/app/login/Login.php',

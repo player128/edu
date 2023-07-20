@@ -13,8 +13,8 @@
         }
     }
 ?>
-<form class = "form-user" >
-    <div class = "label-name-form">Регистрация</div>
+<form class = "myform form-reg" >
+    <div class = "myform-label-name-form">Регистрация</div>
     <div class = "label-name">Имя:</div>
     <div>
         <input name= "name" type="text">
@@ -23,6 +23,5 @@
     <div>
         <input name="pass" type="text">
     </div>
-    <div class="form-close">X</div>
-    <div class = "form-send">O</div>
+    <div class = "myform-send form-reg-send">O</div>
 </form>
