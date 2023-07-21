@@ -15,6 +15,14 @@
     }
 
     function elem($text) {
-        echo "<div class='elem elem-text border'>$text</div>";
+
+        $html = <<< _END
+            <div class='elem elem-text border'>
+                <a href='http://localhost/edu/info/param/$text'>
+                $text
+                </a>
+            </div>
+        _END;
+        echo $html;
     }
 ?>
