@@ -17,10 +17,18 @@ class Route
 			$controller_name = $routes[2];
 		}
 		
-		// получаем имя экшена
-		if ( !empty($routes[3]) )
+		// // получаем имя экшена
+		// if ( !empty($routes[3]) )
+		// {
+		// 	$action_name = $routes[3];
+		// }
+
+		if ( !empty($routes[3]) && $routes[3] == 'param') 
 		{
-			$action_name = $routes[3];
+			if (!empty($routes[4]))
+			{
+				$param = $routes[4];
+			}
 		}
 
 		// добавляем префиксы
@@ -46,16 +54,20 @@ class Route
 		// создаем контроллер
 		$controller = new $controller_name;
 		$action = $action_name;
-		
+
 		if(method_exists($controller, $action))
 		{
 			// вызываем действие контроллера
-			$controller->$action();
+			if (!empty($param))
+			{
+				$controller->$action($param);
+			}
+			else $controller->$action();
 		}
 		else
 		{
 			// здесь также разумнее было бы кинуть исключение
-			Route::ErrorPage404();
+			//Route::ErrorPage404();
 		}
 	
 	}
