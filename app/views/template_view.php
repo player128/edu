@@ -21,7 +21,7 @@
         ?>
     </head>
     <body>
-        <div class="top">\
+        <div class="top">
             <div class="top-main">
                 <a href="http://localhost/edu/">На главную</a>
             </div>
