@@ -1,7 +1,6 @@
 <?php
 namespace Edu\app\login;
 
-require_once('C:\xampp\htdocs\edu\app\mysql\mysql.php');
 use \Edu\app\mysql\Mysql;
 
 class User 
