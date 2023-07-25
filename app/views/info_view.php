@@ -9,7 +9,13 @@
             if ($dh = opendir($dir)) {
                 while (($file = readdir($dh)) !== false) {
                     if ($file == '.' || $file == '..') continue;
-                    echo "<li>$file</li>";
+                    $file = str_replace(".txt", "", $file);
+                    $html = <<< _END
+                        <li>
+                            <a href='http://localhost/edu/text/param/$file'>$file</a>
+                        </li>
+                    _END;
+                    echo $html;
                 }
                 closedir($dh);
             }
