@@ -12,24 +12,11 @@ class Route
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
 
 		// получаем имя контроллера
-		if ( !empty($routes[2]) )
-		{	
-			$controller_name = $routes[2];
-		}
-		
-		// // получаем имя экшена
-		// if ( !empty($routes[3]) )
-		// {
-		// 	$action_name = $routes[3];
-		// }
-
-		if ( !empty($routes[3]) && $routes[3] == 'param') 
-		{
-			if (!empty($routes[4]))
-			{
-				$param = $routes[4];
-			}
-		}
+		if ( !empty($routes[2]) ) $controller_name = $routes[2];
+		// получаем имя действия
+		if ( !empty($routes[3]) ) $action_name = $routes[3];
+		// получаем имя параметра
+		if ( !empty($routes[4]) ) $param = $routes[4];
 
 		// добавляем префиксы
 		$model_name = 'Model_'.$controller_name;
@@ -47,10 +34,10 @@ class Route
 			правильно было бы кинуть здесь исключение,
 			но для упрощения сразу сделаем редирект на страницу 404
 			*/
-			Route::ErrorPage404();
+			//Route::ErrorPage404();
 			echo "Класс $controller_name не найден";
 		}
-		
+
 		// создаем контроллер
 		$controller = new $controller_name;
 		$action = $action_name;
@@ -58,7 +45,7 @@ class Route
 		if(method_exists($controller, $action))
 		{
 			// вызываем действие контроллера
-			if (!empty($param))
+			if ( !empty($param) )
 			{
 				$controller->$action($param);
 			}
