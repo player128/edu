@@ -5,7 +5,7 @@ $('.form-reg-send').click(function() {
     console.log($('.form-reg').serialize())
     $.ajax({
         type: "POST",
-        url: 'http://localhost/edu/app/login/Reg.php',
+        url: 'http://localhost/edu/regis',
         data: $('.form-reg').serialize(),
         success: function(response)
         {
