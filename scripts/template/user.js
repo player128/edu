@@ -21,7 +21,7 @@ $('.form-user-send').click(function() {
     console.log($('.form-user-send').serialize())
     $.ajax({
         type: "POST",
-        url: 'http://localhost/edu/app/login/Login.php',
+        url: 'http://localhost/edu/auth',
         data: $('.form-user').serialize(),
         success: function(response)
         {
