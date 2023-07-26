@@ -1,11 +1,20 @@
 $('.user').click(function() {
     if (isLogin()) {
-        logOut();
-        location.reload();
+        //logOut();
+        $('.menu-user').removeClass('form-hide');
+        //location.reload();
         return true;
     }
     $('.form-user').removeClass('form-hide');
     $('.myform-back').removeClass('form-hide');
+
+});
+
+$('.logout').click(function () {
+    if (isLogin()) {
+        logOut();
+        location.reload();
+    }
 });
 
 $('.form-user-close').click(function() {
@@ -40,6 +49,13 @@ $('.form-user-send').click(function() {
        }
    });
 });
+
+if (window.location.href == "http://localhost/edu/info") {
+    $('.info').css({
+        "border-bottom": "2px solid white",
+        "z-index": 1
+    });
+}
 
 function logIn(name) {
     setCookie('login', 1, {'max-age' : '259200'});

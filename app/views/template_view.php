@@ -38,6 +38,19 @@
             <div class="myform-close form-user-close">X</div>
             <div class = "myform-send form-user-send">O</div>
         </form>
+        <div class="menu-user form-hide">
+            <div class="logout">Выйти</div>
+        </div>
+        <div class="menu-top">
+            <div class="info">
+                <a href="http://localhost/edu/info">Контент</a>
+            </div>
+            <div>Text2</div>
+            <div>Text3</div>
+            <div>Text4</div>
+            <div>Text5</div>
+            <hr>
+        </div>
         <?php include 'app/views/'.$content_view; ?>
         </div>
         <div class="myform-back form-hide"></div>
