@@ -13,7 +13,6 @@ class View
 			extract($data);
 		}
 		*/
-		
 		include 'app/views/'.$template_view;
 	}
 }
