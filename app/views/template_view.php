@@ -1,8 +1,11 @@
 <html>
     <head>
+        <?php
+        global $host;
+        ?>
         <meta charset='utf-8'>
-        <link rel="stylesheet" href="http://192.168.0.104:80/edu/css/norm.css">
-        <link rel="stylesheet" href="http://192.168.0.104:80/edu/css/style.css">
+        <link rel="stylesheet" href="<?="http://$host/edu/css/norm.css"?>">
+        <link rel="stylesheet" href="<?="http://$host/edu/css/style.css"?>">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <?php
             use \Edu\app\core\File;
@@ -15,7 +18,7 @@
     <body>
         <div class="top">
             <div class="top-main">
-                <a href="http://localhost/edu/">На главную</a>
+                <a href="<?="http://$host/edu"?>">На главную</a>
             </div>
             <div class="user">
                 
@@ -43,7 +46,7 @@
         </div>
         <div class="menu-top">
             <div class="info">
-                <a href="http://localhost/edu/info">Контент</a>
+                <a href="<?="http://$host/edu/info"?>">Контент</a>
             </div>
             <div>Text2</div>
             <div>Text3</div>
