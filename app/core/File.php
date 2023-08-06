@@ -28,7 +28,7 @@ class File
 	function loadStyle($folder)
 	{
 		global $host;
-		$dir = "C:/xampp/htdocs/edu/scripts/$folder";
+		$dir = "C:/xampp/htdocs/edu/css/$folder";
 		/*
 		Подумать над очерденостью загрузки скриптов, чтобы не возникали ошибки undefined
 		*/
@@ -36,7 +36,7 @@ class File
 			if ($dh = opendir($dir)) {
 				while (($file = readdir($dh)) !== false) {
 					if ($file == '.' || $file == '..') continue;
-					echo "<link  href='http://$host/edu/css/$folder/$file'></link>";
+					echo "<link   rel='stylesheet' href='http://$host/edu/css/$folder/$file'></link>";
 				}
 				closedir($dh);
 			}

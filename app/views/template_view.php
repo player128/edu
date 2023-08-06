@@ -5,14 +5,13 @@
         ?>
         <meta charset='utf-8'>
         <link rel="stylesheet" href="<?="http://$host/edu/css/norm.css"?>">
-        <link rel="stylesheet" href="<?="http://$host/edu/css/style.css"?>">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <?php
             use \Edu\app\core\File;
 
-            $folder = 'template';
             $file = new File();
-            $file->loadScript($folder);
+            $file->loadScript('template');
+            $file->loadStyle('template');
         ?>
     </head>
     <body>
@@ -28,33 +27,35 @@
             </div>
         </div>
         <div class="content content-center">
-        <form class = "myform form-user form-hide" >
-            <div class = "myform-label-name-form">Авторизация</div>
-            <div class = "label-name">Имя:</div>
-            <div>
-                <input name= "name" type="text">
+            <form class = "myform form-user form-hide" >
+                <div class = "myform-label-name-form">Авторизация</div>
+                <div class = "label-name">Имя:</div>
+                <div>
+                    <input name= "name" type="text">
+                </div>
+                <div class = "label-pass">Пароль:</div>
+                <div>
+                    <input name="pass" type="text">
+                </div>
+                <div class="myform-close form-user-close">X</div>
+                <div class = "myform-send form-user-send">O</div>
+            </form>
+            <div class="menu-user form-hide">
+                <div class="logout">Выйти</div>
             </div>
-            <div class = "label-pass">Пароль:</div>
-            <div>
-                <input name="pass" type="text">
+            <div class="menu-top">
+                <div class="info">
+                    <a href="<?="http://$host/edu/info"?>">Контент</a>
+                </div>
+                <div>
+                    <a href="<?="http://$host/edu/time"?>">График времени</a>
+                </div>
+                <div>Text3</div>
+                <div>Text4</div>
+                <div>Text5</div>
+                <hr>
             </div>
-            <div class="myform-close form-user-close">X</div>
-            <div class = "myform-send form-user-send">O</div>
-        </form>
-        <div class="menu-user form-hide">
-            <div class="logout">Выйти</div>
-        </div>
-        <div class="menu-top">
-            <div class="info">
-                <a href="<?="http://$host/edu/info"?>">Контент</a>
-            </div>
-            <div>Text2</div>
-            <div>Text3</div>
-            <div>Text4</div>
-            <div>Text5</div>
-            <hr>
-        </div>
-        <?php include 'app/views/'.$content_view; ?>
+            <?php include 'app/views/'.$content_view; ?>
         </div>
         <div class="myform-back form-hide"></div>
     </body>

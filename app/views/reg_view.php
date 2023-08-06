@@ -1,9 +1,9 @@
 <?php
     use \Edu\app\core\File;
 
-    $folder = 'reg';
     $file = new File();
-    $file->loadScript($folder);
+    $file->loadScript('reg');
+    $file->loadStyle('reg');
 ?>
 <form class = "myform form-reg" >
     <div class = "myform-label-name-form">Регистрация</div>

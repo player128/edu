@@ -1,4 +1,12 @@
 <?php
+    use \Edu\app\core\File;
+
+    $file = new File();
+    $file->loadScript('info');
+    $file->loadStyle('info');
+?>
+<div class="content-info">
+<?php
     $dir = 'contents';
 
     if (is_dir($dir)) {
@@ -26,3 +34,4 @@
         echo $html;
     }
 ?>
+</div>

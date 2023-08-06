@@ -1,0 +1,12 @@
+table.time {
+    width: 300px;
+    border: 1px solid grey;
+}
+
+table.time th {
+    height: 20px;
+}
+
+table.time td {
+    height: 20px;
+}
