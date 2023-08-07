@@ -1,6 +1,12 @@
 table.time {
     width: 300px;
-    border: 1px solid grey;
+    border-spacing:0;
+    border-collapse: collapse;
+    
+}
+
+table.time tr {
+    padding: 0;
 }
 
 table.time th {
@@ -9,4 +15,9 @@ table.time th {
 
 table.time td {
     height: 20px;
+}
+
+table.time td, 
+table.time th {
+    border: 1px solid grey;
 }
