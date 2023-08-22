@@ -20,4 +20,34 @@ table.time td {
 table.time td, 
 table.time th {
     border: 1px solid grey;
+    text-align: center;
+}
+
+.content-time {
+    display: flex;
+}
+
+.content-time div {
+    border: 1px solid black;
+}
+
+.table {
+}
+
+.add {
+    flex-grow: 1;
+    text-align: center;
+    border: 0 !important;
+}
+
+.add span {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: lightblue;
+}
+
+.graph {
+   flex-grow: 6;
+   background-color: green;
+   min-height: 500px;
 }
