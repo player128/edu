@@ -1,0 +1,49 @@
+[class^="box-"] {
+  background-color: skyblue;
+  /* Размещаем контейнеры по центру */
+  display: grid;
+  place-items: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    /* grid-template-columns: 200px auto 100px;
+    grid-template-rows: 200px auto 100px; */
+      /* grid-template-areas:
+    "A A A A   A A A A   A A A A"
+    "B B B B   B B B B   B B C C"
+    "B B B B   B B B B   B B C C"; */
+    /* grid-template-columns: 100px 100px 100px; 
+
+
+    column-gap:  50px;
+    grid-template-rows: 100px 100px 100px;
+    row-gap:  50px; */
+
+      /* Каждый контейнер имеет размер 200px на 200px */
+    /* grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+
+
+    /* //justify-items : end; * */
+    /* grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+  
+    align-items: center; */
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.box-1 {
+  /* grid-area: A; */
+}
+.box-2 {
+  /* grid-area: B; */
+}
+.box-3 {
+  /* grid-area: C; */
+}
