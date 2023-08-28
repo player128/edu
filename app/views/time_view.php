@@ -7,6 +7,17 @@
 ?>
 <h1>Time</h1>
 <div class="content-time">
+    <form class="form-time myform" myform>
+        <div class = "label-date">Дата:</div>
+        <div>
+            <input type="text" name = "date" >
+        </div>
+        <div class = "label-minute">Кол-во минут:</div>
+        <div>
+            <input type="text" name = "minute">
+        </div>
+        <div class = "myform-send form-time-send">O</div>
+    </div>
     <div class="table">
         <table class="time">
             <tr>

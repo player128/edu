@@ -4,6 +4,8 @@ namespace Edu\app\controllers;
 use \Edu\app\core\Controller;
 use \Edu\app\mysql\Mysql;
 use \Edu\app\mysql\Collection;
+use \Edu\app\models\Model_Time;
+
 
 class Controller_Time extends Controller
 {
@@ -51,5 +53,31 @@ class Controller_Time extends Controller
 		echo "</pre>";	
 
         return true;
+	}
+
+	function action_add() {
+		if (!empty($_POST['date']) && !empty($_POST['minute'])) {
+			$data = [
+				"date" => $_POST['date'],
+				"minute" => $_POST['minute']
+			];
+			$model = new Model_Time($data);
+			$collect = new Collection("Time");
+			$res = $collect->add($model);
+			$res = json_encode($res);
+			if ($res) {
+				echo $res;
+			}
+			else {
+				echo json_encode("-1");
+			}
+		}
+	}
+	function delete() {
+
+	}
+
+	function update() {
+
 	}
 }

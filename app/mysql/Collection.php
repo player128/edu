@@ -35,8 +35,23 @@ class Collection
         return $data;
     }
 
-    function set($data)
+    function add($model)
     {
-        
+        $mysql = new Mysql();
+        $query = "INSERT INTO `$this->tableName` (";
+        foreach ($model->fields as $key => $value) {
+            if ($key == 'id') continue;
+            $query .= "`$key`,";
+        }
+        $query[strlen($query) - 1] = ")";
+        $query .= " VALUES (";
+
+        foreach ($model->fields as $key => $value) {
+            if ($key == 'id') continue;
+            $query .= "'$value',";
+        }
+        $query[strlen($query) - 1] = ")";
+
+        return $mysql->query($query);
     }
 }
