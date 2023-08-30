@@ -7,7 +7,7 @@
 ?>
 <h1>Time</h1>
 <div class="content-time">
-    <form class="form-time myform" myform>
+    <form class="form-time myform form-hide">
         <div class = "label-date">Дата:</div>
         <div>
             <input type="text" name = "date" >
@@ -17,7 +17,7 @@
             <input type="text" name = "minute">
         </div>
         <div class = "myform-send form-time-send">O</div>
-    </div>
+    </form>
     <div class="table">
         <table class="time">
             <tr>
@@ -46,6 +46,5 @@
     </div>
     <div class = "add"><span>+</span></div>
     <div class="graph">
-
     </div>
 </div>

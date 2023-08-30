@@ -1,5 +1,5 @@
 $('.add span').click(function () {
-    $('.form-time').css({'display':'block'});
+    $('.form-time').removeClass('form-hide');
 });
 
 $('.form-time-send').click(function () {
@@ -23,4 +23,19 @@ $('.form-time-send').click(function () {
 });
 
 
-$('.form-time').css({'display':'none'});
+// ////
+// console.log("===================");
+// let array = [
+//     1,2,5,6,8,10,12
+// ];
+
+// let ob = {
+//     min : 5,
+//     max : 9,
+
+//     check(n) {
+//         return n > this.min && n < this.max;
+//     }
+// };
+
+// console.log(array.filter(ob.check, ob));
