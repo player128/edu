@@ -22,6 +22,9 @@ $('.form-time-send').click(function () {
    });
 });
 
+$('.form-time-close').click(function (){
+    $('.form-time').addClass('form-hide');
+});
 
 // ////
 // console.log("===================");

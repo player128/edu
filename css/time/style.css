@@ -51,3 +51,12 @@ table.time th {
    background-color: green;
    min-height: 500px;
 }
+
+.form-time .form-time-close {
+    width: 20px;
+    border: 0;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    font-size: 18px;
+}

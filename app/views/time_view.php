@@ -8,6 +8,7 @@
 <h1>Time</h1>
 <div class="content-time">
     <form class="form-time myform form-hide">
+        <div class = "form-time-close">X</div>
         <div class = "label-date">Дата:</div>
         <div>
             <input type="text" name = "date" >
