@@ -47,10 +47,7 @@ class Controller_Time extends Controller
 
 		$collect = new Collection("Time");
 		$data = $collect->get();
-
-		echo "<pre>";
-		print_r($data);
-		echo "</pre>";	
+		print_r(json_encode($data));
 
         return true;
 	}
@@ -64,13 +61,9 @@ class Controller_Time extends Controller
 			$model = new Model_Time($data);
 			$collect = new Collection("Time");
 			$res = $collect->add($model);
-			$res = json_encode($res);
-			if ($res) {
-				echo $res;
-			}
-			else {
-				echo json_encode("-1");
-			}
+
+			if (!$res) $res = -1;
+			echo json_encode($res);
 		}
 	}
 	function delete() {

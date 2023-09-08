@@ -47,5 +47,6 @@
     </div>
     <div class = "add"><span>+</span></div>
     <div class="graph">
+    <canvas class="chart"></canvas>
     </div>
 </div>

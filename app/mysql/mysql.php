@@ -26,7 +26,12 @@ class Mysql
             die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
         }
 
-        $result = $mysqli->query($text);
+        try { // Ловим mysql исключения, например так поймал, исключение, вызванное создание дупликата в БД для поля дата
+            $result = $mysqli->query($text);
+        } catch (\Exception $e) {
+            return false;
+        }
+
         if ($mysqli->errno) {
             die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
         }

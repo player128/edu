@@ -48,8 +48,8 @@ table.time th {
 
 .graph {
    flex-grow: 6;
-   background-color: green;
    min-height: 500px;
+   max-width: 950px;
 }
 
 .form-time .form-time-close {

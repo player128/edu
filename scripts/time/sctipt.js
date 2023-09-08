@@ -11,7 +11,7 @@ $('.form-time-send').click(function () {
         {   
             var jsonData = JSON.parse(response);
             if (jsonData == -1) {
-                alert('Не получилось..');
+                alert('Не получилось.. \nВозможно, нужно поменять дату!');
             } else {
                 // alert('Аккаунт зарегестрирован. Зайдите под аккаунт.');
                 // window.location = "http://localhost/edu/";
