@@ -50,12 +50,18 @@ $('.form-user-send').click(function() {
    });
 });
 
-if (window.location.href == "http://localhost/edu/info") {
-    $('.info').css({
-        "border-bottom": "2px solid white",
-        "z-index": 1
-    });
+function paintUpLine() {
+    switch (window.location.href) {
+        case "http://localhost/edu/info": 
+            $('.info').addClass("painUpLine");
+            break;
+        case "http://localhost/edu/time": 
+            $('.time').addClass("painUpLine");
+            break;
+    }
 }
+
+paintUpLine();
 
 function logIn(name) {
     setCookie('login', 1, {'max-age' : '259200'});

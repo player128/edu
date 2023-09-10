@@ -47,8 +47,8 @@
                 <div class="info">
                     <a href="<?="http://$host/edu/info"?>">Контент</a>
                 </div>
-                <div>
-                    <a href="<?="http://$host/edu/time"?>">График времени</a>
+                <div class="time">
+                    <a href="<?="http://$host/edu/time"?>">График</a>
                 </div>
                 <div>Text3</div>
                 <div>Text4</div>
