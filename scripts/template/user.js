@@ -58,6 +58,15 @@ function paintUpLine() {
         case "http://localhost/edu/time": 
             $('.time').addClass("painUpLine");
             break;
+        case "http://localhost/edu/game": 
+            $('.game').addClass("painUpLine");
+            break;
+        case "http://localhost/edu/video": 
+            $('.video').addClass("painUpLine");
+            break;
+        case "http://localhost/edu/chat": 
+            $('.chat').addClass("painUpLine");
+            break;
     }
 }
 

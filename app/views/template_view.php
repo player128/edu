@@ -50,9 +50,15 @@
                 <div class="time">
                     <a href="<?="http://$host/edu/time"?>">График</a>
                 </div>
-                <div>Text3</div>
-                <div>Text4</div>
-                <div>Text5</div>
+                <div class="game">
+                    <a href="<?="http://$host/edu/game"?>">Игра</a>
+                </div>
+                <div class="video">
+                    <a href="<?="http://$host/edu/video"?>">Видео</a>
+                </div>
+                <div class="chat">
+                    <a href="<?="http://$host/edu/chat"?>">Чат</a>
+                </div>
                 <hr>
             </div>
             <?php include 'app/views/'.$content_view; ?>
