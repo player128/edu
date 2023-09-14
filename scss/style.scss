@@ -1,14 +1,16 @@
-$color : green;
+@import "_var";
+@import "_mixins";
 
 .info{
     .item{
-        width: 50px;
-        height: 50px;
-        background-color: $color;
+        @include block(blue);
     }
     .item2{
-        width: 30px;
-        height: 25px;
-        background-color: black; 
+        @include block;
+        @include border(1px solid black);
+    }
+
+    .item3{
+        @include item(yellow);
     }
 }
