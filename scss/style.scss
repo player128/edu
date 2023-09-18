@@ -8,6 +8,12 @@
     .item2{
         @include block;
         @include border(1px solid black);
+        > a{
+            color: white;
+            &:hover{
+                color: darken($color: white, $amount: 30%);
+            }
+        }
     }
 
     .item3{

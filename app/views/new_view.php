@@ -2,7 +2,9 @@
 
 <div class="info">
    <div class="item"></div>
-   <div class="item2"></div>
+   <div class="item2">
+      <a href="#">Нажми плиз)</a>
+   </div>
    <div class="item3"></div>
    <div class="item4"></div>
    <div class="item5"></div>  

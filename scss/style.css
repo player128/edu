@@ -11,6 +11,12 @@
   background-color: green;
   border: 1px solid black;
 }
+.info .item2 > a {
+  color: white;
+}
+.info .item2 > a:hover {
+  color: #b3b3b3;
+}
 .info .item3 {
   width: 50px;
   height: 100px;
