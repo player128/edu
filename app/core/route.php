@@ -9,7 +9,7 @@ class Route
 		$controller_name = 'Main';
 		$action_name = 'index';
 		
-		$routes = explode('/', $_SERVER['REQUEST_URI']);
+		$routes = explode('/', $_SERVER['REQUEST_URI'], 5);
 
 		// получаем имя контроллера
 		if ( !empty($routes[2]) ) $controller_name = $routes[2];
@@ -34,12 +34,13 @@ class Route
 			правильно было бы кинуть здесь исключение,
 			но для упрощения сразу сделаем редирект на страницу 404
 			*/
-			//Route::ErrorPage404();
+			Route::ErrorPage404();
 			echo "Класс $controller_name не найден";
 		}
 
 		// создаем контроллер
 		$controller = new $controller_name;
+		// var_dump( $controller_name);
 		$action = $action_name;
 
 		if(method_exists($controller, $action))
@@ -54,7 +55,7 @@ class Route
 		else
 		{
 			// здесь также разумнее было бы кинуть исключение
-			//Route::ErrorPage404();
+			Route::ErrorPage404();
 		}
 	
 	}

@@ -45,7 +45,7 @@
             </div>
             <div class="menu-top">
                 <div class="info">
-                    <a href="<?="http://$host/edu/info"?>">Контент</a>
+                    <a href="<?="http://$host/edu/content"?>">Контент</a>
                 </div>
                 <div class="time">
                     <a href="<?="http://$host/edu/time"?>">График</a>
