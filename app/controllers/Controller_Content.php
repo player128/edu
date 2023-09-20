@@ -14,15 +14,15 @@ class Controller_Content extends Controller
 	{	
         $model = new Model_Content();
         $data = $model->get_file($param);
-        if ($data) $this->view->generate('contenttt_view.php', 'template_view.php', $data);
-        else $this->view->generate('contenttt_view.php', 'template_view.php');
+        if ($data) $this->view->generate('content_view.php', 'template_view.php', $data);
+        else $this->view->generate('content_view.php', 'template_view.php');
 	}
 
     function action_list($param = null)
     {
         $model = new Model_Content();
         $data = $model->get_list($param);
-        if ($data) $this->view->generate('contenttt_view.php', 'template_view.php', $data);
-        else $this->view->generate('contenttt_view.php', 'template_view.php');
+        if ($data) $this->view->generate('content_view.php', 'template_view.php', $data);
+        else $this->view->generate('content_view.php', 'template_view.php');
     }
 }
